@@ -37,12 +37,6 @@ train_df = pd.read_csv("/content/drive/MyDrive/.../fashion-mnist_train.csv")
 test_df  = pd.read_csv("/content/drive/MyDrive/.../fashion-mnist_test.csv")
 ```
 
-> **Note:** on the copy of this dataset used during development, the file named
-> `fashion-mnist_train.csv` actually contained the smaller 10,000-row split and
-> `fashion-mnist_test.csv` contained the larger 60,000-row split (opposite of what the
-> filenames suggest). Verify shapes after loading — the real training set should have
-> 60,000 rows and the test set 10,000 rows — and swap the two file paths if needed.
-
 Mount Google Drive first if running in Colab:
 ```python
 from google.colab import drive
@@ -71,18 +65,13 @@ Each part depends on variables created in the environment setup cell (`x_train`,
 built in Part 5 (`x_train_small`, `y_train_small`). Run cells in order within a single
 kernel session.
 
-### 4. Expected Runtime
-- Parts 1–5: a few minutes each on a T4 GPU.
-- Part 6: ~15–20 minutes (11 model variants trained sequentially).
-- Part 7: ~20–30 minutes (12 configs × 5 folds = 60 short training runs, plus one longer
-  final retrain).
 
-### 5. Key Results Reference
+### 4. Key Results Reference
 See `results_summary.docx` for the one-page summary of the final configuration, test score,
 and the single change that most improved performance (widening the network to 512 units
 combined with dropout regularisation, informed by the Part 6 study).
 
 ## Repository Contents
-- `DL_ASS01_XXF_YYYY.ipynb` — full notebook, all 7 parts, executed with visible outputs.
+- `DL_ASS01_23F-0665_23F-0701.ipynb` — full notebook, all 7 parts, executed with visible outputs.
 - `results_summary.docx` — one-page results summary (final score, configuration, key change).
 - `README.md` — this file.
